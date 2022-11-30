@@ -25,7 +25,7 @@ public class DatabaseHelperRegister extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(" create table account (SSN integer primary key autoincrement , firstName varchar, " +
-                "lastName varchar, middleName varchar, username varchar, username varchar , confirmPassword varchar)");
+                "lastName varchar, middleName varchar, username varchar, passowrd varchar , confirmPassword varchar)");
     }
 
     @Override

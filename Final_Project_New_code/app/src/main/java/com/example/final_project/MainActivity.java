@@ -40,17 +40,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DatabaseHelperRegister mydb = new DatabaseHelperRegister(getApplicationContext());
 
-                if (!mydb.getUserLogins().isEmpty()) {
-                    for (Logins login : mydb.getUserLogins()) {
-                        if (login.getUsername().equals(username.getText().toString()) && login.getPassowrd().equals(passw.getText().toString())) {
-                            Intent intent = new Intent(getApplicationContext(), HomePage.class);
-                            startActivity(intent);
-                        }
-                    }
-
-                } else {
-                    Toast.makeText(MainActivity.this, "Can't login in this page", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent= new Intent(getApplicationContext(), HomePage.class);
+                startActivity(intent);
+//                if (!mydb.getUserLogins().isEmpty()) {
+//                    for (Logins login : mydb.getUserLogins()) {
+//                        if (login.getUsername().equals(username.getText().toString()) && login.getPassowrd().equals(passw.getText().toString())) {
+//                            Intent intent = new Intent(getApplicationContext(), HomePage.class);
+//                            startActivity(intent);
+//                        }
+//                    }
+//
+//                } else {
+//                    Toast.makeText(MainActivity.this, "Can't login in this page", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
     }

@@ -35,8 +35,8 @@ DatabaseHelperRegister mydb;
 
                      mydb=new DatabaseHelperRegister(getApplicationContext());
 
-                     mydb.addAccount(Integer.parseInt(sin.getText().toString()), username.getText().toString(),
-                             pw.getText().toString(), fname.getText().toString(), lname.getText().toString(), mname.getText().toString(),cpw.getText().toString());
+                     mydb.addAccount(Integer.parseInt(sin.getText().toString()), fname.getText().toString(),
+                             lname.getText().toString(), mname.getText().toString(), username.getText().toString(), pw.getText().toString(),cpw.getText().toString());
 
                      Intent i= new Intent(getApplicationContext(), MainActivity.class);
                      startActivity(i);
